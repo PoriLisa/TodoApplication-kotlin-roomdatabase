@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="7dp"
+        tools:context=".view.DeleteAndUpdateActivity">
+
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="Update Task"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="task?"
+            app:layout_constraintEnd_toEndOf="@+id/tv_update"
+            app:layout_constraintStart_toStartOf="@+id/tv_update"
+            app:layout_constraintTop_toBottomOf="@+id/tv_update" />
+
+        <EditText
+            android:id="@+id/editTextDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="description..."
+            app:layout_constraintEnd_toEndOf="@+id/editTextTask"
+            app:layout_constraintStart_toStartOf="@+id/editTextTask"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTask" />
+
+        <EditText
+            android:id="@+id/editTextFinishBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="finish by?"
+            app:layout_constraintEnd_toEndOf="@+id/editTextDesc"
+            app:layout_constraintStart_toStartOf="@+id/editTextDesc"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDesc" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFinished"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark as finished"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFinishBy"
+            app:layout_constraintStart_toStartOf="@+id/editTextFinishBy"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFinishBy" />
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/colorPrimary"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLight"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxFinished"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxFinished" />
+
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/colorRed"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxFinished" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
